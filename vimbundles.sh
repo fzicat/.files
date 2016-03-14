@@ -13,8 +13,23 @@ get_bundle() {
 }
 
 get_bundle tpope vim-pathogen
+#get_bundle tpope vim-unimpaired
+get_bundle tpope vim-surround
+get_bundle vim-airline vim-airline
+get_bundle vim-airline vim-airline-themes
 get_bundle pangloss vim-javascript
 get_bundle easymotion vim-easymotion
+get_bundle scrooloose nerdtree
+get_bundle ctrlpvim ctrlp.vim
+
+#get_bundle jiangmiao auto-pairs
+#get_bundle Raimondi delimitMate
+get_bundle Townk vim-autoclose
+
+#get_bundle ternjs tern_for_vim
+#get_bundle Valloric YouCompleteMe
+
+get_bundle helino vim-json
 
 #get_bundle bling vim-airline
 #get_bundle duff vim-bufonly
@@ -24,7 +39,7 @@ get_bundle easymotion vim-easymotion
 #get_bundle tpope vim-commentary
 #get_bundle tpope vim-endwise
 #get_bundle tpope vim-eunuch
-#get_bundle tpope vim-fugitive
+get_bundle tpope vim-fugitive
 #get_bundle tpope vim-git
 #get_bundle tpope vim-markdown
 #get_bundle tpope vim-ragtag
