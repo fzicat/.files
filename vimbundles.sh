@@ -31,12 +31,14 @@ get_bundle Townk vim-autoclose
 
 get_bundle helino vim-json
 
+get_bundle leafgarland typescript-vim
+
 #get_bundle bling vim-airline
 #get_bundle duff vim-bufonly
 #get_bundle tpope vim-abolish
 #get_bundle tpope vim-bundler
 #get_bundle tpope vim-classpath
-#get_bundle tpope vim-commentary
+get_bundle tpope vim-commentary
 #get_bundle tpope vim-endwise
 #get_bundle tpope vim-eunuch
 get_bundle tpope vim-fugitive
