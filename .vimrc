@@ -7,6 +7,7 @@ set number
 set relativenumber
 set noerrorbells
 set hidden
+set directory=$HOME/.vim/swapfiles//
 
 let mapleader = " "
 

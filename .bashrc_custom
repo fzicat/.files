@@ -1,3 +1,8 @@
+# Centos
+#export TERM=xterm-24bit
+# Ubuntu
+export TERM=xterm-256color
+
 # Enable a better reverse search experience. 
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
 #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)

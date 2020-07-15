@@ -8,9 +8,11 @@
 echo ".files"
 
 cd $HOME
+mkdir -p $HOME/.vim/swapfiles
 
 echo "Linking dotfile..."
-ln -fs .files/.vimrc
 ln -fs .files/.bashrc_custom
+ln -fs .files/.tmux.conf
+ln -fs .files/.vimrc
 
 echo "Done!"
