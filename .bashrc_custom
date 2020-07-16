@@ -2,10 +2,10 @@
 OS=$(awk '/^ID=/' /etc/os-release | sed 's/ID=//')
 if [ $OS == 'ubuntu' ]; then
 	export TERM=xterm-256color
-	echo "ubuntu -> xterm-256color"
+	#echo "ubuntu -> xterm-256color"
 else
 	export TERM=xterm-24bit
-	echo "centos or other -> xterm-24bit"
+	#echo "centos or other -> xterm-24bit"
 fi
 
 # Enable a better reverse search experience. 
@@ -17,11 +17,12 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # aliases
 alias ll='ls -lAF'
+alias ta='tmux a'
 
 # Prompt
 # https://stackoverflow.com/questions/15682537/ansi-color-specific-rgb-sequence-bash
-# export PS1='\[\033[38;2;20;120;20m\][\u] \[\033[38;2;200;200;0m\]\w \[\033[38;2;50;230;250m\]$(__git_ps1 " [%s]") \[\033[00m\]\$ '
-# export PS1='\[\033[38;2;20;120;20m\][\u] \[\033[38;2;50;230;250m\]\w \[\033[48;2;200;200;0m\]$(__git_ps1 " [%s]") \[\033[00m\]\$ '
 export PS1='\[\033[38;2;40;40;40m\]\[\033[48;2;214;93;14m\] [\u] \[\033[38;2;40;40;40m\]\[\033[48;2;131;165;152m\] \w \[\033[38;2;40;40;40m\]\[\033[48;2;250;189;47m\]$(__git_ps1 " [%s] ")\[\033[00m\] \n$ '
 
-neofetch
+if command -v neofetch &> /dev/null; then
+	neofetch
+fi
