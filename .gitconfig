@@ -1,0 +1,6 @@
+[user]
+	name = Francois Zicat
+	email = fzicat@bzinc.ca
+[alias]
+	co = checkout
+	br = branch

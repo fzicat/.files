@@ -7,6 +7,8 @@ set number
 set relativenumber
 set noerrorbells
 set hidden
+set nobackup
+set nowritebackup
 set directory=$HOME/.vim/swapfiles//
 
 let mapleader = " "
@@ -84,19 +86,25 @@ call plug#begin('~/.vim/plugged')
 "
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 "Plug 'mengelbrecht/lightline-bufferline'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'justinmk/vim-sneak'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'dense-analysis/ale'
+Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
 "
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-"colorscheme dracula
 colorscheme gruvbox
 set background=dark
+
+" vim-commentary
+nmap <leader>/ <Plug>Commentary
+nmap <C-_> <Plug>Commentary
+
+" Config files
+source ~/.vim/config/coc.vim
