@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ajouter .bashrc_custom a la fin de .bashrc:
-# echo ". ~/.bashrc_custom" >> ~/.bashrc
+# echo "if [ -t 0 ];then . ~/.bashrc_custom; fi" >> ~/.bashrc
 #
 # installer junegunn/vim-plug
 
