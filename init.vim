@@ -78,8 +78,10 @@ let g:lightline = {
 " FZF
 nnoremap <silent> <Leader>f :FZF<CR>
 nnoremap <silent> <Leader>n :Lines<CR>
+nnoremap <silent> <Leader><space> :Buffers<CR>
 nnoremap <silent> <Leader><Enter> :Buffers<CR>
-
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -93,6 +95,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'justinmk/vim-sneak'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
 "
@@ -103,8 +106,8 @@ colorscheme gruvbox
 set background=dark
 
 " vim-commentary
-nmap <leader>/ <Plug>Commentary
-nmap <C-_> <Plug>Commentary
+" nmap <leader>/ <Plug>Commentary
+" nmap <C-_> <Plug>Commentary
 
 " Config files
 source ~/.vim/config/coc.vim
