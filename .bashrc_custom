@@ -18,6 +18,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # aliases
 alias ll='ls -lAF'
 alias ta='tmux a'
+alias vi='nvim'
 
 # Prompt
 # https://stackoverflow.com/questions/15682537/ansi-color-specific-rgb-sequence-bash
