@@ -98,6 +98,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
+Plug 'mhinz/vim-startify'
 "
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
