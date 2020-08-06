@@ -16,13 +16,16 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # aliases
-alias ll='ls -lAF'
+alias ls='ls --color=auto'
+alias ll='ls -lAF --color=auto'
 alias ta='tmux a'
 alias vi='nvim'
 
 # Prompt
 # https://stackoverflow.com/questions/15682537/ansi-color-specific-rgb-sequence-bash
 export PS1='\[\033[38;2;40;40;40m\]\[\033[48;2;214;93;14m\] [\u] \[\033[38;2;40;40;40m\]\[\033[48;2;131;165;152m\] \w \[\033[38;2;40;40;40m\]\[\033[48;2;250;189;47m\]$(__git_ps1 " [%s] ")\[\033[00m\] \n$ '
+
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 
 if command -v neofetch &> /dev/null; then
 	neofetch
