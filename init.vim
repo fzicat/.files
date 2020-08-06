@@ -12,6 +12,7 @@ set nowritebackup
 set directory=$HOME/.vim/swapfiles//
 
 let mapleader = " "
+command S Startify
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -50,31 +51,6 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-""" LIGHTLINE et LIGHTLINE-BUFFERLINE
-set noshowmode
-set laststatus=2
-"set showtabline=2
-let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-		\ }
-"      \ 'tabline': {
-"      \   'left': [ ['buffers'] ],
-"      \   'right': [ ['close'] ]
-"      \ },
-"      \ 'component_expand': {
-"      \   'buffers': 'lightline#bufferline#buffers'
-"      \ },
-"      \ 'component_type': {
-"      \   'buffers': 'tabsel'
-"      \ }
-"      \ }
-
 " FZF
 nnoremap <silent> <Leader>f :FZF<CR>
 nnoremap <silent> <Leader>n :Lines<CR>
@@ -89,9 +65,9 @@ call plug#begin('~/.vim/plugged')
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
-"Plug 'mengelbrecht/lightline-bufferline'
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'justinmk/vim-sneak'
@@ -106,9 +82,7 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 
-" vim-commentary
-" nmap <leader>/ <Plug>Commentary
-" nmap <C-_> <Plug>Commentary
-
 " Config files
 source ~/.vim/config/coc.vim
+source ~/.vim/config/startify.vim
+source ~/.vim/config/lightline.vim
