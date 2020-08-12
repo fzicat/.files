@@ -1,7 +1,7 @@
 # Set term color according to distro (for tmux)
 OS=$(awk '/^ID=/' /etc/os-release | sed 's/ID=//')
-echo $OS
-if [ $OS != 'arch' ]; then
+# echo $OS
+if [ $OS == 'arch' ]; then
 	export TERM=xterm-24bit
 	source /usr/share/git/completion/git-completion.bash
 	source /usr/share/git/completion/git-prompt.sh
