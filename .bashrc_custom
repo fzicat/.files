@@ -5,7 +5,7 @@ if [ $OS == 'arch' ]; then
 	export TERM=xterm-24bit
 	source /usr/share/git/completion/git-completion.bash
 	source /usr/share/git/completion/git-prompt.sh
-elif [ $OS == 'centos' ]; then
+elif [ $OS == '"centos"' ]; then
 	export TERM=xterm-24bit
 elif [ $OS == 'ubuntu' ]; then
 	export TERM=xterm-256color
