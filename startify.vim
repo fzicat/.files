@@ -4,6 +4,8 @@ let g:startify_bookmarks = [
             \ '~/bzerp',
             \ '~/tradelog',
             \ '~/hamm',
+            \ '/mnt/c/Users/fzicat/Google Drive/',
+            \ '/mnt/c/Users/fzicat/OneDrive - BZ inc/',
             \ ]
 
 let g:startify_session_autoload = 1
