@@ -2,7 +2,7 @@
 OS=$(awk '/^ID=/' /etc/os-release | sed 's/ID=//')
 # echo $OS
 if [ $OS == 'arch' ]; then
-	export TERM=xterm-24bit
+	export TERM=xterm-256color
 	source /usr/share/git/completion/git-completion.bash
 	source /usr/share/git/completion/git-prompt.sh
 elif [ $OS == '"centos"' ]; then
