@@ -1,16 +1,10 @@
-# Set term color according to distro (for tmux)
 OS=$(awk '/^ID=/' /etc/os-release | sed 's/ID=//')
 # echo $OS
 if [ $OS == 'arch' ]; then
-	export TERM=xterm-256color
 	source /usr/share/git/completion/git-completion.bash
 	source /usr/share/git/completion/git-prompt.sh
-elif [ $OS == '"centos"' ]; then
-	export TERM=xterm-24bit
-elif [ $OS == 'ubuntu' ]; then
-	export TERM=xterm-256color
-else
-	echo "unknown distro"
+	source /usr/share/fzf/key-bindings.bash
+	source /usr/share/fzf/completion.bash
 fi
 
 # Enable a better reverse search experience. 
@@ -18,7 +12,10 @@ fi
 #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+if [ $OS != 'arch']; then
+	[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+fi
 
 # aliases
 alias ls='ls --color=auto'
@@ -28,11 +25,18 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
+# lf
+export EDITOR='nvim'
+#LS_COLORS=$LS_COLORS:'di=0;36:' ; export LS_COLORS
+alias lf1='LSCOLORS=GxfxcxdxCxegedabagacad lf'
+alias lf3='LSCOLORS=GxfxcxdxCxegedaaaaaaad lf'
+alias lf2='LSCOLORS="rs=0:di=01;38;5;12:ln=01;38;5;14:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=38;5;12;42:st=37;44:ex=01;38;5;10:\" lf'
+
 # Prompt
 # https://stackoverflow.com/questions/15682537/ansi-color-specific-rgb-sequence-bash
 export PS1='\[\033[38;2;40;40;40m\]\[\033[48;2;214;93;14m\] [\u] \[\033[38;2;40;40;40m\]\[\033[48;2;131;165;152m\] \w \[\033[38;2;40;40;40m\]\[\033[48;2;250;189;47m\]$(__git_ps1 " [%s] ")\[\033[00m\] \n$ '
 
-[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
+#[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 
 if command -v neofetch &> /dev/null; then
 	neofetch
