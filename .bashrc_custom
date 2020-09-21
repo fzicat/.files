@@ -1,5 +1,4 @@
 OS=$(awk '/^ID=/' /etc/os-release | sed 's/ID=//')
-# echo $OS
 if [ $OS == 'arch' ]; then
 	source /usr/share/git/completion/git-completion.bash
 	source /usr/share/git/completion/git-prompt.sh
@@ -13,9 +12,9 @@ fi
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-if [ $OS != 'arch' ]; then
-	[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-fi
+#if [ $OS != 'arch' ]; then
+#	[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#fi
 
 # path
 PATH=~/.local/bin/:$PATH
