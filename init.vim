@@ -76,6 +76,7 @@ Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 Plug 'morhetz/gruvbox'
 Plug 'mhinz/vim-startify'
+Plug 'SkyLeach/pudb.vim'
 "
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -87,3 +88,4 @@ set background=dark
 source ~/.vim/config/coc.vim
 source ~/.vim/config/startify.vim
 source ~/.vim/config/lightline.vim
+source ~/.vim/config/pudb.vim
