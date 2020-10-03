@@ -9,6 +9,8 @@ set noerrorbells
 set hidden
 set nobackup
 set nowritebackup
+set cursorline
+set foldmethod=indent
 set directory=$HOME/.vim/swapfiles//
 
 let mapleader = " "
@@ -77,6 +79,8 @@ Plug 'tomtom/tcomment_vim'
 Plug 'morhetz/gruvbox'
 Plug 'mhinz/vim-startify'
 Plug 'SkyLeach/pudb.vim'
+Plug 'airblade/vim-rooter'
+Plug 'jiangmiao/auto-pairs'
 "
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
