@@ -38,6 +38,8 @@ alias lf2='LSCOLORS="rs=0:di=01;38;5;12:ln=01;38;5;14:mh=00:pi=40;33:so=01;35:do
 # https://stackoverflow.com/questions/15682537/ansi-color-specific-rgb-sequence-bash
 export PS1='\[\033[38;2;40;40;40m\]\[\033[48;2;214;93;14m\] [\u] \[\033[38;2;40;40;40m\]\[\033[48;2;131;165;152m\] \w \[\033[38;2;40;40;40m\]\[\033[48;2;250;189;47m\]$(__git_ps1 " [%s] ")\[\033[00m\] \n$ '
 
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+
 #[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 
 # if command -v neofetch &> /dev/null; then
