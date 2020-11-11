@@ -4,6 +4,9 @@
 # echo "if [ -t 0 ];then . ~/.bashrc_custom; fi" >> ~/.bashrc
 #
 # installer junegunn/vim-plug
+# 
+# firewall rule to add on Windows 10:
+# New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
 
 echo ".files"
 
