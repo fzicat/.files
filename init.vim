@@ -14,6 +14,10 @@ set foldmethod=indent
 set directory=$HOME/.vim/swapfiles//
 
 let mapleader = " "
+noremap l h
+noremap h l
+noremap j k
+noremap k j
 command S Startify
 
 nnoremap <leader>h :wincmd h<CR>
