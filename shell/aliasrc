@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)"  ] && alias vim="nvim" vimdiff="nvim -d"
+
+# sudo not required for some system commands
+for x in mount umount sv pacman updatedb su ; do
+    alias $x="sudo $x"
+done
+
+alias \
+    l="ls -lahN --color=auto --group-directories-first" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto" \
+    ccat="highlight --out-format=ansi" \
+    g="git" \
+    e="$EDITOR" \
+    v="$EDITOR" \
+    p="sudo pacman" \
+    tl="python ~/tradelog/cli/cli.py --prod" \
+    s='cmd.exe /C start "" "$(fzf)"' \
+    sod='cd ~/od && cmd.exe /C start "" "$(fzf)"' \
+    sgd='cd ~/gd && cmd.exe /C start "" "$(fzf)"' \
+
+alias \
+    cdh='cd /mnt/c/Users/fzicat/' \
+    cod='cd ~/od' \
+    cgd='cd ~/gd' \
+
