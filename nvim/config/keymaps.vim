@@ -4,7 +4,7 @@ noremap e j
 noremap n h
 noremap i l
 
-" pageup/pagedown
+" pageup/pagedowd
 nnoremap <C-u> <C-b>
 nnoremap <C-e> <C-f>
 
@@ -29,3 +29,8 @@ nnoremap l u
 " escape
 inoremap mg <Esc>
 inoremap gm <Esc>
+
+" save & exit
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :wq<CR>
+nnoremap <leader>Q :q!<CR>
