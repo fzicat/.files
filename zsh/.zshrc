@@ -31,6 +31,8 @@ source /usr/share/fzf/completion.zsh
 # path
 PATH=~/.local/bin/:$PATH
 
+unsetopt BEEP
+
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/shell/shortcutrc"  ] && source "$HOME/.config/shell/shortcutrc"
 [ -f "$HOME/.config/shell/aliasrc"  ] && source "$HOME/.config/shell/aliasrc"

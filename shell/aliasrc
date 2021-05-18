@@ -18,13 +18,17 @@ alias \
     v="$EDITOR" \
     p="sudo pacman" \
     tl="python ~/tradelog/cli/cli.py --prod" \
-    st='cmd.exe /C start "" "$(fzf)"' \
-    od='cd ~/od && cmd.exe /C start "" "$(fzf)"' \
-    gd='cd ~/gd && cmd.exe /C start "" "$(fzf)"' \
+    start='cmd.exe /C start "" "$(fzf)"' \
+    od='cd ~/documents/od && cmd.exe /C start "" "$(fzf)"' \
+    gd='cd ~/documents/gd && cmd.exe /C start "" "$(fzf)"' \
+    st='cd ~/documents && cmd.exe /C start "" "$(fzf)"' \
 
 alias \
     gtd="git diff" \
     gts="git status" \
+
+alias \
+    va="nvim ~/.files/shell/aliasrc"
 
 alias \
     cdh='cd /mnt/c/Users/fzicat/' \
