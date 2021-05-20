@@ -1,8 +1,6 @@
 # Colors and prompt
 autoload -U colors && colors
 
-# PS1='\[\033[38;2;40;40;40m\]\[\033[48;2;214;93;14m\] [\u] \[\033[38;2;40;40;40m\]\[\033[48;2;131;165;152m\] \w \[\033[38;2;40;40;40m\]\[\033[48;2;250;189;47m\]$(__git_ps1 " [%s] ")\[\033[00m\] \n$ '
-# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 PS1='%F{black}%K{red} [%n] %K{cyan} %~ %f%k $ '
 RPROMPT='[%F{yellow}%T%f]'
 
@@ -17,7 +15,7 @@ bindkey -v
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
+compinit -d ~/.cache/zsh/.zcompdump
 _comp_options+=(globdots)     # Include hidden files.
 
 # OS=$(awk '/^ID=/' /etc/os-release | sed 's/ID=//')
