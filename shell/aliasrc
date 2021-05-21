@@ -21,7 +21,7 @@ alias \
     start='cmd.exe /C start "" "$(fzf)"' \
     od='cd ~/documents/od && cmd.exe /C start "" "$(fzf)"' \
     gd='cd ~/documents/gd && cmd.exe /C start "" "$(fzf)"' \
-    st='cd ~/documents && cmd.exe /C start "" "$(rg --files --hidden --follow "./Google\ Drive ./OneDrive\ -\ BZ\ inc BZ\ inc" | fzf)"' \
+    st='cd ~/documents && cmd.exe /C start "" "$(rg --files --hidden --follow Google\ Drive OneDrive\ -\ BZ\ inc BZ\ inc | fzf)"' \
 
 alias \
     gtd="git diff" \
