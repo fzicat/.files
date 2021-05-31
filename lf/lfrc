@@ -1,9 +1,14 @@
 set hidden
 set scrolloff 8
 
-map u up
-map e down
-map n updir
-map i open
 map v $$EDITOR "$f"
 map s $$SHELL
+map w winstarta
+
+cmd winstarta ${{
+    cmd.exe /C start "" "$f"
+}}
+
+cmd winstart ${{
+    echo $f
+}}

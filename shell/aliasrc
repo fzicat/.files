@@ -22,13 +22,16 @@ alias \
     od='cd ~/documents/od && cmd.exe /C start "" "$(fzf)"' \
     gd='cd ~/documents/gd && cmd.exe /C start "" "$(fzf)"' \
     st='cd ~/documents && cmd.exe /C start "" "$(rg --files --hidden --follow Google\ Drive OneDrive\ -\ BZ\ inc BZ\ inc | fzf)"' \
+    s1='cd ~/documents && echo "$(rg --files --hidden --follow Google\ Drive OneDrive\ -\ BZ\ inc BZ\ inc | fzf)"' \
+    ss='cmd.exe /C start "" "$(rg --files --hidden --follow ./ | fzf)"' \
 
 alias \
     gtd="git diff" \
     gts="git status" \
 
 alias \
-    va="nvim ~/.files/shell/aliasrc"
+    va="nvim ~/.files/shell/aliasrc" \
+    vl="nvim ~/.files/lf/lfrc"
 
 alias \
     cdh='cd /mnt/c/Users/fzicat/' \
