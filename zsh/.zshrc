@@ -1,7 +1,24 @@
 # Colors and prompt
 autoload -U colors && colors
 
-PS1='%F{black}%K{red} [%n] %K{cyan} %~ %f%k $ '
+# PROMPT
+# Find and set branch name var if in git repository.
+function git_branch_name()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo '%F{black}%K{yellow} '$branch' %f%k'
+  fi
+}
+
+# Enable substitution in the prompt.
+setopt prompt_subst
+
+# Config for prompt. PS1 synonym.
+PROMPT='%F{black}%K{red} [%n] %K{cyan} %~ %f%k$(git_branch_name) '
 RPROMPT='[%F{yellow}%T%f]'
 
 HISTFILE=~/.cache/zsh/history
