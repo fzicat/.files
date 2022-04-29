@@ -22,6 +22,9 @@ call plug#end()
 
 command Config :e $MYVIMRC
 colorscheme gruvbox
+" set bg=light
+" hi Cursor         guifg=#F8F8F8           guibg=#A7A7A7
+" hi CursorIM       guifg=#F8F8F8           guibg=#002947"#5F5A60
 
 source ~/.config/nvim/config/sets.vim
 source ~/.config/nvim/config/keymaps.vim
