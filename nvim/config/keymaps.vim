@@ -34,3 +34,5 @@ inoremap gm <Esc>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :wq<CR>
 nnoremap <leader>Q :q!<CR>
+nnoremap <leader>l :set background=light<CR>
+nnoremap <leader>d :set background=dark<CR>

@@ -14,8 +14,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-startify'
 "Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-commentary'
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'nvim-lua/completion-nvim'
 "
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -29,5 +29,5 @@ colorscheme gruvbox
 source ~/.config/nvim/config/sets.vim
 source ~/.config/nvim/config/keymaps.vim
 source ~/.config/nvim/config/fzf.vim
-source ~/.config/nvim/config/lsp.vim
+"source ~/.config/nvim/config/lsp.vim
 source ~/.config/nvim/config/startify.vim

@@ -30,9 +30,10 @@ echo ".files"
 ln -fs $HOME/.files/shell $HOME/.config/shell
 ln -fs $HOME/.files/zsh $HOME/.config/zsh
 ln -fs $HOME/.files/lf $HOME/.config/lf
+ln -fs $HOME/.files/nvim $HOME/.config/nvim
 ln -fs $HOME/.files/tmux/tmux.conf $HOME/.tmux.conf
-ln -fs $HOME/.files/nvim/init.vim $HOME/.config/nvim/init.vim
-ln -fs $HOME/.files/nvim/config $HOME/.config/nvim/config
+#ln -fs $HOME/.files/nvim/init.vim $HOME/.config/nvim/init.vim
+#ln -fs $HOME/.files/nvim/config $HOME/.config/nvim/config
 
 ln -fs $HOME/.config/shell/profile $HOME/.zprofile
 

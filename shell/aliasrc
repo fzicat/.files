@@ -17,7 +17,7 @@ alias \
     e="$EDITOR" \
     v="$EDITOR" \
     p="sudo pacman" \
-    tl="python ~/tradelog/cli/cli.py --prod" \
+    tl="python ~/dev/tradelog/cli/cli.py --prod" \
     start='cmd.exe /C start "" "$(fzf)"' \
     od='cd ~/documents/od && cmd.exe /C start "" "$(fzf)"' \
     gd='cd ~/documents/gd && cmd.exe /C start "" "$(fzf)"' \
