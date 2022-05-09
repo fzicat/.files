@@ -1,5 +1,5 @@
 set number
-set relativenumber
+" set relativenumber
 set noerrorbells
 set hidden
 set nohlsearch
