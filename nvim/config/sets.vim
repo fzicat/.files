@@ -31,7 +31,10 @@ set showtabline=2
 let g:lightline = {
     \ 'colorscheme': 'powerline',
     \ 'active': {
-    \   'left': [ [ 'mode', 'paste'  ], [ 'readonly', 'filename', 'modified'  ]  ]
+    \   'left': [ [ 'mode', 'paste'  ], [ 'gitbranch', 'readonly', 'filename', 'modified'  ]  ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'FugitiveHead'
     \ },
     \ 'tabline': {
     \   'left': [ ['buffers']  ],

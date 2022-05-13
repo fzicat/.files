@@ -14,6 +14,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-startify'
 "Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+" autocompletion
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -39,7 +42,7 @@ source ~/.config/nvim/config/fzf.vim
 "source ~/.config/nvim/config/lsp.vim
 source ~/.config/nvim/config/startify.vim
 
-echo "initvim"
+" echo "initvim"
 
 " lspconfig
 " ---------
@@ -136,3 +139,15 @@ lua <<EOF
     capabilities = capabilities
   }
 EOF
+
+" vim-fugitive
+" let g:lightline = {
+"       \ 'colorscheme': 'powerlineish',
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'paste' ],
+"       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+"       \ },
+"       \ 'component_function': {
+"       \   'gitbranch': 'FugitiveHead'
+"       \ },
+"       \ }

@@ -3,9 +3,9 @@ let g:startify_bookmarks = [
     \ { 'z': '~/.config/zsh/.zshrc'  },
     \ { 'p': '~/.config/shell/profile'  },
     \ { 'b': '~/.files/.bashrc_custom'  },
-    \ '~/bzerp',
-    \ '~/tradelog',
-    \ '~/hamm',
+    \ '~/dev/bzerp',
+    \ '~/dev/tradelog',
+    \ '~/dev/hamm',
     \ '/mnt/c/Users/fzicat/Google Drive/',
     \ '/mnt/c/Users/fzicat/OneDrive - BZ inc/',
     \ ]

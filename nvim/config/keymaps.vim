@@ -7,8 +7,17 @@ nnoremap <C-c> :bdelete<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :wq<CR>
 nnoremap <leader>Q :q!<CR>
+nnoremap <leader>x :bd<CR>
+
+" misc
 nnoremap <leader>l :set background=light<CR>
 nnoremap <leader>d :set background=dark<CR>
+
+" git
+nnoremap <leader>g :G
+
+" startify
+nnoremap <leader>s :S<CR>
 
 function! ColemakMapping()
     echo "Colemak DHm Activated!"
