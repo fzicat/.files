@@ -27,10 +27,10 @@ echo ".files"
 #ln -fs $HOME/.files/powerline_fz.vim $HOME/.vim/plugged/lightline.vim/autoload/lightline/colorscheme/powerline_fz.vim
 #ln -fs $HOME/.files/dwm/config.def.h $HOME/dwm-6.2/config.def.h
 
-ln -fs $HOME/.files/shell $HOME/.config/shell
-ln -fs $HOME/.files/zsh $HOME/.config/zsh
-ln -fs $HOME/.files/lf $HOME/.config/lf
-ln -fs $HOME/.files/nvim $HOME/.config/nvim
+ln -fs $HOME/.files/shell $HOME/.config/
+ln -fs $HOME/.files/zsh $HOME/.config/
+ln -fs $HOME/.files/lf $HOME/.config/
+ln -fs $HOME/.files/nvim $HOME/.config/
 ln -fs $HOME/.files/tmux/tmux.conf $HOME/.tmux.conf
 #ln -fs $HOME/.files/nvim/init.vim $HOME/.config/nvim/init.vim
 #ln -fs $HOME/.files/nvim/config $HOME/.config/nvim/config
