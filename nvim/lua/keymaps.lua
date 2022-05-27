@@ -25,7 +25,7 @@ map('n', '<leader>d', ':lua vim.opt.background = "dark"<CR>', { noremap = true, 
 map('n', '<leader>l', ':lua vim.opt.background = "light"<CR>', { noremap = true, silent = true })
 
 -- NvimTree
-map('n', '<F7>', ':NvimTreeToggle<CR>', {silent = true })
+map('n', '<leader>e', ':NvimTreeToggle<CR>', {silent = true })
 
 -- Hope bindings
 map('n', '<leader>h', ':HopWord<CR>', { noremap = true, silent = true })

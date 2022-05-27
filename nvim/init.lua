@@ -12,10 +12,10 @@ require('plug_config.nvim-tree')
 require('plug_config.hop')
 require('plug_config.autopairs')
 require('plug_config.telescope')
-
+require('plug_config.cmp')
 -- require('plug_config.toggle_lsp_diagnostics')
-require('plug_config.lsp-cmp')
-require('plug_config.lsp-config')
+-- require('plug_config.lsp-cmp')
+-- require('plug_config.lsp-config')
 
 --TODO 
 -- persistent undo
