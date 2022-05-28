@@ -47,10 +47,10 @@ map('n', '<Leader>o', ':Telescope oldfiles<CR>', { noremap = true, silent = true
 map('n', '<Leader>s', ':Telescope live_grep<CR>', { noremap = true, silent = true })
 
 -- Better window navigation
-map("n", "<C-h>", "<C-w>h", opts)
-map("n", "<C-j>", "<C-w>j", opts)
-map("n", "<C-k>", "<C-w>k", opts)
-map("n", "<C-l>", "<C-w>l", opts)
+map("n", "<C-m>", "<C-w>h", opts)
+map("n", "<C-n>", "<C-w>j", opts)
+map("n", "<C-e>", "<C-w>k", opts)
+map("n", "<C-i>", "<C-w>l", opts)
 
 -- Resize with arrows
 map("n", "<C-Up>", ":resize -2<CR>", opts)
