@@ -28,6 +28,8 @@ alias \
 alias \
     gtd="git diff" \
     gts="git status" \
+    gtc="git checkout" \
+    gty="lazygit" \
 
 alias \
     va="nvim ~/.files/shell/aliasrc" \

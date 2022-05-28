@@ -3,7 +3,12 @@ set scrolloff 8
 
 map v $$EDITOR "$f"
 map s $$SHELL
-map w winstarta
+map W winstarta
+
+map n down
+map e up
+map m updir
+map i open
 
 cmd winstarta ${{
     cmd.exe /C start "" "$f"
