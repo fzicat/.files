@@ -1,6 +1,6 @@
 require('keymaps')
 require('general')
-
+--
 require('plugins')
 require('plug_config.gruvbox')
 require('plug_config.dashboard')
@@ -13,7 +13,11 @@ require('plug_config.hop')
 require('plug_config.autopairs')
 require('plug_config.telescope')
 require('plug_config.cmp')
-require('plug_config.lsp')
+require('plug_config.lsp-config')
+
+-- require('plug_config.lsp.gopls')
+
+-- require('plug_config.lsp')
 -- require('plug_config.toggle_lsp_diagnostics')
 -- require('plug_config.lsp-cmp')
 -- require('plug_config.lsp-config')

@@ -17,15 +17,15 @@ map('n', '<leader>b', ':BufferLinePick<CR>', { noremap = true, silent = true })
 map('n', '<leader>x', ':BufferLinePickClose<CR>', { noremap = true, silent = true })
 map('n', '<TAB>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
 map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
-map('n', '<leader>m.', ':BufferLineMoveNext<CR>', { noremap = true, silent = true })
-map('n', '<leader>m,', ':BufferLineMovePrev<CR>', { noremap = true, silent = true })
+-- map('n', '<leader>m.', ':BufferLineMoveNext<CR>', { noremap = true, silent = true })
+-- map('n', '<leader>m,', ':BufferLineMovePrev<CR>', { noremap = true, silent = true })
 
 -- Background color
 map('n', '<leader>d', ':lua vim.opt.background = "dark"<CR>', { noremap = true, silent = true })
 map('n', '<leader>l', ':lua vim.opt.background = "light"<CR>', { noremap = true, silent = true })
 
 -- NvimTree
-map('n', '<leader>e', ':NvimTreeToggle<CR>', {silent = true })
+map('n', '<leader>t', ':NvimTreeToggle<CR>', {silent = true })
 
 -- Hope bindings
 map('n', '<leader>h', ':HopWord<CR>', { noremap = true, silent = true })
@@ -42,15 +42,15 @@ function _find_files()
     end
 end
 
-map('n', '<Leader>f', ':lua _find_files()<CR>', { noremap = true, silent = true })
-map('n', '<Leader>o', ':Telescope oldfiles<CR>', { noremap = true, silent = true })
-map('n', '<Leader>s', ':Telescope live_grep<CR>', { noremap = true, silent = true })
+map('n', '<leader>f', ':lua _find_files()<CR>', { noremap = true, silent = true })
+map('n', '<leader>o', ':Telescope oldfiles<CR>', { noremap = true, silent = true })
+map('n', '<leader>s', ':Telescope live_grep<CR>', { noremap = true, silent = true })
 
 -- Better window navigation
-map("n", "<C-m>", "<C-w>h", opts)
-map("n", "<C-n>", "<C-w>j", opts)
-map("n", "<C-e>", "<C-w>k", opts)
-map("n", "<C-i>", "<C-w>l", opts)
+map("n", "<leader>m", "<C-w>h", opts)
+map("n", "<leader>n", "<C-w>j", opts)
+map("n", "<leader>e", "<C-w>k", opts)
+map("n", "<leader>i", "<C-w>l", opts)
 
 -- Resize with arrows
 map("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -59,8 +59,8 @@ map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Move text up and down
-map("n", "<A-j>", "<Esc>:m .+1<CR>==", opts)
-map("n", "<A-k>", "<Esc>:m .-2<CR>==", opts)
+map("n", "<A-n>", "<Esc>:m .+1<CR>==", opts)
+map("n", "<A-e>", "<Esc>:m .-2<CR>==", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -68,8 +68,8 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 -- Move text up and down
-map("v", "<A-j>", ":m .+2<CR>gv", opts)
-map("v", "<A-k>", ":m .-2<CR>gv", opts)
+map("v", "<A-n>", ":m .+2<CR>gv", opts)
+map("v", "<A-e>", ":m .-2<CR>gv", opts)
 -- map("v", "p", '"_dP', opts)
 
 -- Switch between colemak and querty. Colemak is the default
@@ -111,6 +111,6 @@ function qwerty()
     vim.api.nvim_del_keymap('n', 'H')
 end
 
-map('n', '<Leader>k', ':lua colemak()<CR>', { noremap = true, silent = true })
-map('n', '<Leader>v', ':lua qwerty()<CR>', { noremap = true, silent = true })
+map('n', '<leader>k', ':lua colemak()<CR>', { noremap = true, silent = true })
+map('n', '<leader>v', ':lua qwerty()<CR>', { noremap = true, silent = true })
 colemak()
