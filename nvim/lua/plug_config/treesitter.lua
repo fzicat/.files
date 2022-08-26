@@ -6,7 +6,7 @@ end
 
 configs.setup {
     -- A list of parser names, or "all"
-    ensure_installed = { "go", "lua" },
+    ensure_installed = { "go", "lua", "vue", "typescript", "javascript", "html", "python", "svelte", "css"},
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,

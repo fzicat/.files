@@ -42,6 +42,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 -- local servers = {'pyright', 'arduino_language_server', 'tsserver', 'hls', 'cmake', 'html', 'cssls', 'rust_analyzer', 'sumneko_lua', 'bashls', 'ccls'}
 local servers = {'gopls'}
 
+util = require "lspconfig/util"
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -49,6 +50,60 @@ for _, lsp in ipairs(servers) do
     flags = {
       debounce_text_changes = 150,
     },
-    root_dir = function() return vim.loop.cwd() end
+    -- root_dir = function() return vim.loop.cwd() end
+
+    cmd = {"gopls", "serve"},
+    filetypes = {"go", "gomod"},
+    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
   }
 end
+
+-- util = require "lspconfig/util"
+-- lspconfig.gopls.setup {
+-- cmd = {"gopls", "serve"},
+-- filetypes = {"go", "gomod"},
+-- root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+-- settings = {
+--   gopls = {
+--     analyses = {
+--       unusedparams = true,
+--     },
+--     staticcheck = true,
+--   },
+-- },
+-- }
+
+-- require'lspconfig'.volar.setup{
+--   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+-- }
+
+require'lspconfig'.pyright.setup{
+  filetypes = {'python'}
+}
+
+require'lspconfig'.svelte.setup{
+  init_options = {
+    configuration = {
+      svelte = {
+        plugin = {
+          typescript = {
+            enable = false
+          }
+        }
+      }
+    }
+  }
+}
+
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+require'lspconfig'.cssls.setup{
+  capabilities = capabilities
+}

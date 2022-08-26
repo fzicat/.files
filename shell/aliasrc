@@ -16,6 +16,7 @@ alias \
     g="git" \
     e="$EDITOR" \
     v="$EDITOR" \
+    b="bat" \
     p="sudo pacman" \
     tl="python ~/dev/tradelog/cli/cli.py --prod" \
     start='cmd.exe /C start "" "$(fzf)"' \
